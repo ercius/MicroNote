@@ -105,7 +105,7 @@ class App:
         self._root.protocol("WM_DELETE_WINDOW", self._on_close)
 
     def _pick_folder(self) -> bool:
-        folder = filedialog.askdirectory(title="Select folder to watch")
+        folder = filedialog.askdirectory(title="Select folder to watch", initialdir="D:/user_data")
         if not folder:
             messagebox.showinfo("Cancelled", "No folder selected. Exiting.")
             return False
